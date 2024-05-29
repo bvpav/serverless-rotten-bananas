@@ -1,0 +1,48 @@
+### Create Movie
+POST https://36u6kpvyyel7xcqbjhond55dpq0wknll.lambda-url.eu-north-1.on.aws/
+Content-Type: application/json
+
+{
+  "title": "Top Gun: Maverick",
+  "year": 2022,
+  "genre": "Thriller",
+  "description": "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+  "director": "Joseph Kosinski",
+  "actors": "Tom Cruise, Jennifer Connelly, Val Kilmer"
+}
+
+### Rate Movie
+POST https://jsguayhseihzolohcsrzgurwxm0hhnwt.lambda-url.eu-north-1.on.aws/
+Content-Type: application/json
+
+{
+  "movieId": 1,
+  "title": "One of the best movies ever and I love it!",
+  "rating": 9,
+  "review": "I love this movie and I think it's one of the best movies ever! I love the actors and the story is amazing! I would recommend this movie to everyone! The part where the main character, Pete Mitchell, is flying the plane is just amazing! I love it!",
+  "author": "John Doe"
+}
+
+### Rate Movie (Invalid Movie ID)
+POST https://jsguayhseihzolohcsrzgurwxm0hhnwt.lambda-url.eu-north-1.on.aws/
+Content-Type: application/json
+
+{
+  "movieId": 100,
+  "title": "One of the best movies ever and I love it!",
+  "rating": 9,
+  "review": "I love this movie and I think it's one of the best movies ever! I love the actors and the story is amazing! I would recommend this movie to everyone! The part where the main character, Pete Mitchell, is flying the plane is just amazing! I love it!",
+  "author": "John Doe"
+}
+
+### Rate Movie Again
+POST https://jsguayhseihzolohcsrzgurwxm0hhnwt.lambda-url.eu-north-1.on.aws/
+Content-Type: application/json
+
+{
+  "movieId": 1,
+  "title": "Liked the original movie better",
+  "rating": 7,
+  "review": "I liked the original movie better. This one was good but the original was better. I would recommend this movie to everyone who liked the original movie. The part where the main character, Pete Mitchell, is flying the plane is just amazing! I love it!",
+  "author": "Jane Doe"
+}
